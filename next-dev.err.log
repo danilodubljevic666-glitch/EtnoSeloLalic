@@ -1,0 +1,53 @@
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'map')
+    at Home (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/src_0ex8sj.._.js?id=%255Bproject%255D%252Fsrc%252Fapp%252Fpage.js+%255Bapp-client%255D+%2528ecmascript%2529:90:69)
+    at Object.react_stack_bottom_frame (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:186)
+    at performSyncWorkOnRoot (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10179:316)
+    at processRootScheduleInMicrotask (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10200:106)
+    at <unknown> (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10274:158)
+    at ClientPageRoot (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_0hfqncd._.js:8022:50)
+⨯ TypeError: Cannot read properties of undefined (reading 'map')
+    at Home (src\app\page.js:37:38)
+  35 |             <p className="about-stats-title">{t.sections.aboutCardTitle}</p>
+  36 |             <div className="mt-5 space-y-3">
+> 37 |               {t.sections.aboutStats.map((item, index) => (
+     |                                      ^
+  38 |                 <div
+  39 |                   key={item.label}
+  40 |                   className="about-stat-row" {
+  digest: '3790340021'
+}
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'map')
+    at Home (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/src_0ex8sj.._.js:1070:69)
+    at Object.react_stack_bottom_frame (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:15037:24)
+    at renderWithHooks (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:4620:24)
+    at updateFunctionComponent (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6081:21)
+    at beginWork (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6691:24)
+    at runWithFiberInDEV (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopSync (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9449:40)
+    at renderRootSync (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9433:13)
+    at performWorkOnRoot (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64)
+    at ClientPageRoot (file://C:/Users/Korisnik/OneDrive/Desktop/Website Projects/EtnoSeloLalic/.next/dev/static/chunks/node_modules_next_0hfqncd._.js:8022:50)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+⚠ Fast Refresh had to perform a full reload when ./src/components/LanguageProvider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
