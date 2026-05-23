@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function HeroSection() {
@@ -10,11 +11,16 @@ export default function HeroSection() {
       id="pocetna"
       className="relative isolate min-h-screen scroll-mt-24 overflow-hidden"
     >
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-section.png')" }}
-        aria-hidden="true"
-      />
+      <div className="absolute inset-0 -z-20 overflow-hidden" aria-hidden="true">
+        <Image
+          src="/hero-section.webp"
+          alt="Hero background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
       <div
         className="absolute inset-0 -z-10 bg-gradient-to-r from-stone-950/75 via-stone-950/45 to-stone-950/10"
         aria-hidden="true"
