@@ -15,8 +15,6 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/hero-section.webp" as="image" />
       </head>
       <body>
-        {/* Immediately hide body until React mounts the preloader */}
-        <script dangerouslySetInnerHTML={{ __html: `document.body.style.visibility='hidden'` }} />
         <Preloader />
         <LanguageProvider>
           <Nav />

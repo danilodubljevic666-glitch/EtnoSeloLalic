@@ -8,9 +8,6 @@ export default function Preloader() {
   const [phase, setPhase] = useState("visible");
 
   useEffect(() => {
-    // Reveal body now that React has mounted
-    document.body.style.visibility = "";
-
     const start = Date.now();
 
     const dismiss = () => {
