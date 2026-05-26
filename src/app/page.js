@@ -313,7 +313,7 @@ export default function Home() {
         id="galerija"
         className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16 sm:px-10"
       >
-        <h2 className="text-3xl font-bold tracking-tight text-stone-950">
+        <h2 className="text-3xl font-bold tracking-tight text-stone-950 text-center">
           {t.sections.galleryTitle}
         </h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">

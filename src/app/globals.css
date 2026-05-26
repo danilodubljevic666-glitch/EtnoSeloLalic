@@ -429,6 +429,7 @@ body {
 
 .about-kicker {
   width: fit-content;
+  margin: 0 auto;
   border-left: 3px solid #2f6f43;
   padding-left: 0.85rem;
   color: #315b32;
@@ -442,6 +443,9 @@ body {
 .about-heading {
   margin-top: 0.9rem;
   max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   color: #162515;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.75rem, 6vw, 5.6rem);
@@ -797,6 +801,7 @@ body {
 
 .reviews-kicker {
   width: fit-content;
+  margin: 0 auto;
   border-left: 3px solid #2f6f43;
   padding-left: 0.85rem;
   color: #315b32;
@@ -809,6 +814,7 @@ body {
 
 .review-heading {
   margin-top: 0.7rem;
+  text-align: center;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 800;
@@ -937,6 +943,7 @@ body {
 
 .amenity-kicker {
   width: fit-content;
+  margin: 0 auto;
   border-left: 3px solid #2f6f43;
   padding-left: 0.85rem;
   color: #315b32;
@@ -949,6 +956,7 @@ body {
 
 .amenity-heading {
   margin-top: 0.7rem;
+  text-align: center;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 800;
@@ -1231,6 +1239,7 @@ body {
   text-transform: uppercase;
   color: #4a7c54;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .rules-heading {
@@ -1238,6 +1247,7 @@ body {
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #1c1a14;
+  text-align: center;
   line-height: 1.15;
   margin-bottom: 0;
 }
