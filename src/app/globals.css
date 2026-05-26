@@ -363,9 +363,7 @@ body {
   position: absolute;
   top: -55px;
   animation-name: leafSway;
-  animation-duration: var(--leaf-sway, 4s);
   animation-timing-function: ease-in-out;
-  animation-delay: var(--leaf-delay, 0s);
   animation-iteration-count: infinite;
   animation-direction: alternate;
   will-change: transform;
@@ -373,9 +371,7 @@ body {
 
 .hero-leaf-inner {
   animation-name: leafFall;
-  animation-duration: var(--leaf-fall, 14s);
   animation-timing-function: linear;
-  animation-delay: var(--leaf-delay, 0s);
   animation-iteration-count: infinite;
   animation-fill-mode: both;
   will-change: transform, opacity;

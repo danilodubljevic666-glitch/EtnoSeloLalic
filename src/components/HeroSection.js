@@ -96,9 +96,9 @@ function FloatingLeaves() {
           <div
             key={id}
             className="hero-leaf-outer"
-            style={{ left, "--leaf-fall": fall, "--leaf-sway": sway, "--leaf-delay": delay, "--leaf-sway-x": swayX }}
+            style={{ left, animationDuration: sway, animationDelay: delay, "--leaf-sway-x": swayX }}
           >
-            <div className="hero-leaf-inner">
+            <div className="hero-leaf-inner" style={{ animationDuration: fall, animationDelay: delay }}>
               <svg
                 viewBox="-16 -24 32 50"
                 width={size}
