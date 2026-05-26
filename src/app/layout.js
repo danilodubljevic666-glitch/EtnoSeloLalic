@@ -2,6 +2,8 @@ import "./globals.css";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import Nav from "@/components/Nav";
 import Preloader from "@/components/Preloader";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "Etno Selo Lalić",
@@ -19,7 +21,9 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           <Nav />
           {children}
+          <Footer />
         </LanguageProvider>
+        <ScrollToTop />
       </body>
     </html>
   );
