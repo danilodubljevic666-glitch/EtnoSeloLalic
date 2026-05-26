@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
+import AmenitiesSection from "@/components/AmenitiesSection";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const galleryImages = [
@@ -208,7 +209,7 @@ export default function Home() {
             <article className="review-card">
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
-                Колибе су удаљене около 8 км од Андријевице, али мир и приватност чине пут вредним.
+                Kolibe su udaljene oko 8 km od Andrijevice, ali mir i privatnost čine put vrednim.
               </blockquote>
               <div className="review-stars">★★★★★</div>
               <div className="review-author-row">
@@ -223,7 +224,7 @@ export default function Home() {
             <article className="review-card">
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
-                Було је одлично! Домаћини су били веома љубазни, стан је уредан, а поглед на нетакнуту природу оставља без даха!
+                Bilo je odlično! Domaćini su bili veoma ljubazni, stan je uredan, a pogled na netaknutu prirodu ostavlja bez daha!
               </blockquote>
               <div className="review-stars">★★★★★</div>
               <div className="review-author-row">
@@ -272,6 +273,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <AmenitiesSection />
 
       {openImage && (
         <div

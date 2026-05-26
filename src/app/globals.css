@@ -420,7 +420,11 @@ body {
   .about-stat-row,
   .reviews-kicker,
   .review-heading,
-  .review-card {
+  .review-card,
+  .amenity-kicker,
+  .amenity-heading,
+  .amenity-featured,
+  .amenity-card {
     opacity: 1;
     transform: none;
     animation: none;
@@ -506,6 +510,7 @@ body {
 }
 
 .review-copy {
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.975rem;
   line-height: 1.78;
   color: #3d4a38;
@@ -586,4 +591,220 @@ body {
 
 .reviews-visible .review-card:nth-child(3) {
   animation: reviewCardIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both;
+}
+
+/* ── Amenities section ── */
+
+.amenities-section {
+  background:
+    linear-gradient(168deg, rgb(250 248 240 / 0.98), rgb(235 244 225 / 0.95)),
+    radial-gradient(circle at 14% 82%, rgb(55 90 48 / 0.10), transparent 38%);
+}
+
+.amenity-kicker {
+  width: fit-content;
+  border-left: 3px solid #2f6f43;
+  padding-left: 0.85rem;
+  color: #315b32;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.amenity-heading {
+  margin-top: 0.7rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  color: #162515;
+  line-height: 1.05;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.amenity-featured {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(135deg, #1a4a28 0%, #2d6a42 55%, #3d8a58 100%);
+  border-radius: 1.25rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.amenity-featured::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -8%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255 255 255 / 0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.amenity-featured-icon-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255 255 255 / 0.16);
+  border-radius: 50%;
+}
+
+.amenity-featured-icon-wrap svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.amenity-featured-body {
+  flex: 1;
+  min-width: 180px;
+}
+
+.amenity-featured-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 2.8vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: white;
+}
+
+.amenity-featured-desc {
+  margin-top: 0.45rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255 255 255 / 0.80);
+}
+
+.amenity-featured-badge {
+  flex-shrink: 0;
+  padding: 0.45rem 1.15rem;
+  background: rgba(255 255 255 / 0.15);
+  border: 1px solid rgba(255 255 255 / 0.30);
+  border-radius: 2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: white;
+}
+
+.amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.amenity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  padding: 1.5rem 1rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid rgb(45 91 52 / 0.13);
+  box-shadow:
+    0 2px 10px rgba(28 58 20 / 0.07),
+    0 1px 3px rgba(28 58 20 / 0.05);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+  cursor: default;
+}
+
+.amenity-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 14px 40px rgba(28 58 20 / 0.14),
+    0 4px 10px rgba(28 58 20 / 0.08);
+  border-color: rgb(45 91 52 / 0.30);
+}
+
+.amenity-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(45 106 66 / 0.10);
+  color: #2d6a42;
+  transition: background 0.32s ease, transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.amenity-card:hover .amenity-icon-wrap {
+  background: rgba(45 106 66 / 0.18);
+  transform: scale(1.12) rotate(-4deg);
+}
+
+.amenity-icon-wrap svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.amenity-label {
+  font-size: 0.86rem;
+  font-weight: 650;
+  color: #2a3e26;
+  line-height: 1.35;
+}
+
+@keyframes amenityIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.amenities-visible .amenity-kicker {
+  animation: aboutTextRise 0.75s ease-out 0.04s both;
+}
+
+.amenities-visible .amenity-heading {
+  animation: aboutTitleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.amenities-visible .amenity-featured {
+  animation: amenityIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.20s both;
+}
+
+.amenities-visible .amenity-card {
+  animation: amenityIn 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (max-width: 480px) {
+  .amenity-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+  }
+
+  .amenity-card {
+    padding: 1.1rem 0.5rem;
+  }
+
+  .amenity-icon-wrap {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .amenity-featured {
+    padding: 1.75rem 1.5rem;
+  }
 }

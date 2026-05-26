@@ -148,63 +148,36 @@ function HeroSideOrnamentLeft() {
         strokeWidth="3"
         strokeLinecap="round"
       />
-      <g transform="translate(83 254) rotate(-30)">
-        <path
-          d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z"
-          fill="url(#leftLeaf)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.7" />
-      </g>
-      <g transform="translate(119 209) rotate(-42) scale(.88)">
-        <path
-          d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z"
-          fill="url(#leftLeafSoft)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.65" />
-      </g>
-      <g transform="translate(29 214) rotate(54) scale(.86)">
-        <path
-          d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z"
-          fill="url(#leftLeafDark)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58" />
-      </g>
-      <g transform="translate(63 318) rotate(-20) scale(.95)">
-        <path
-          d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z"
-          fill="url(#leftLeafSoft)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62" />
-      </g>
-      <g transform="translate(42 104) rotate(-9) scale(.82)">
-        <path
-          d="M0 0C23-31 66-35 91-5C60 9 26 10 0 0Z"
-          fill="url(#leftLeaf)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4 0C31-5 58-5 84-5" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.7" />
-      </g>
-      <g transform="translate(125 63) rotate(-32) scale(.72)">
-        <path
-          d="M0 0C18-25 51-30 72-8C48 5 22 7 0 0Z"
-          fill="url(#leftLeafDark)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C25-6 48-8 66-8" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58" />
-      </g>
-      <circle cx="65" cy="246" r="3" fill="#f3d06a" fillOpacity="0.75" />
-      <circle cx="76" cy="286" r="2.4" fill="#f3d06a" fillOpacity="0.62" />
-      <circle cx="42" cy="141" r="2.6" fill="#f3d06a" fillOpacity="0.68" />
+      {/* trunk – donja sekcija */}
+      <g transform="translate(72 372) rotate(-28) scale(.80)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#leftLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      <g transform="translate(84 328) rotate(155) scale(.74)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#leftLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.60"/></g>
+      {/* desna grana */}
+      <g transform="translate(102 248) rotate(-50) scale(.78)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#leftLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(121 232) rotate(22) scale(.72)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#leftLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      <g transform="translate(140 213) rotate(-58) scale(.70)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#leftLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62"/></g>
+      <g transform="translate(158 190) rotate(18) scale(.65)"><path d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z" fill="url(#leftLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(166 163) rotate(-40) scale(.76)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#leftLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      {/* lijeva grana */}
+      <g transform="translate(52 291) rotate(-112) scale(.78)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#leftLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(36 267) rotate(-128) scale(.72)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#leftLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62"/></g>
+      <g transform="translate(26 243) rotate(-108) scale(.66)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#leftLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      <g transform="translate(16 214) rotate(-124) scale(.62)"><path d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z" fill="url(#leftLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.60"/></g>
+      {/* trunk – između grana */}
+      <g transform="translate(68 249) rotate(-35) scale(.72)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#leftLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(60 200) rotate(148) scale(.68)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#leftLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.65"/></g>
+      {/* gornja grana */}
+      <g transform="translate(62 101) rotate(-82) scale(.75)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#leftLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(88 91) rotate(-16) scale(.70)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#leftLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62"/></g>
+      <g transform="translate(113 76) rotate(-78) scale(.66)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#leftLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      <g transform="translate(130 57) rotate(-40) scale(.62)"><path d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z" fill="url(#leftLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.60"/></g>
+      <g transform="translate(120 46) rotate(-66) scale(.58)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#leftLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      {/* trunk – gornji dio */}
+      <g transform="translate(50 155) rotate(-42) scale(.65)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#leftLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.65"/></g>
+      <g transform="translate(56 130) rotate(145) scale(.62)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#leftLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <circle cx="78" cy="259" r="2.8" fill="#f3d06a" fillOpacity="0.72" />
+      <circle cx="70" cy="307" r="2.2" fill="#f3d06a" fillOpacity="0.60" />
+      <circle cx="37" cy="106" r="2.4" fill="#f3d06a" fillOpacity="0.65" />
+      <circle cx="162" cy="166" r="1.8" fill="#f3d06a" fillOpacity="0.55" />
       <defs>
         <linearGradient
           id="leftBranch"
@@ -270,63 +243,36 @@ function HeroSideOrnamentRight() {
         strokeWidth="3"
         strokeLinecap="round"
       />
-      <g transform="translate(209 248) scale(-1 1) rotate(-31)">
-        <path
-          d="M0 0C21-31 60-38 87-11C58 5 25 9 0 0Z"
-          fill="url(#rightLeaf)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C30-8 56-10 80-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.7" />
-      </g>
-      <g transform="translate(164 205) scale(-.9 .9) rotate(-44)">
-        <path
-          d="M0 0C18-27 52-34 77-10C51 4 23 7 0 0Z"
-          fill="url(#rightLeafSoft)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C27-7 51-9 71-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.65" />
-      </g>
-      <g transform="translate(272 215) scale(-.86 .86) rotate(55)">
-        <path
-          d="M0 0C20-30 57-36 82-10C55 4 24 8 0 0Z"
-          fill="url(#rightLeafDark)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C28-7 53-10 76-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58" />
-      </g>
-      <g transform="translate(224 326) scale(-.96 .96) rotate(-18)">
-        <path
-          d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z"
-          fill="url(#rightLeafSoft)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62" />
-      </g>
-      <g transform="translate(259 88) scale(-.83 .83) rotate(-8)">
-        <path
-          d="M0 0C23-31 66-35 91-5C60 9 26 10 0 0Z"
-          fill="url(#rightLeaf)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4 0C31-5 58-5 84-5" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.7" />
-      </g>
-      <g transform="translate(170 55) scale(-.72 .72) rotate(-32)">
-        <path
-          d="M0 0C18-25 51-30 72-8C48 5 22 7 0 0Z"
-          fill="url(#rightLeafDark)"
-          stroke="#d6c782"
-          strokeWidth="1.3"
-        />
-        <path d="M4-1C25-6 48-8 66-8" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58" />
-      </g>
-      <circle cx="230" cy="244" r="3" fill="#f3d06a" fillOpacity="0.75" />
-      <circle cx="219" cy="285" r="2.4" fill="#f3d06a" fillOpacity="0.62" />
-      <circle cx="259" cy="131" r="2.6" fill="#f3d06a" fillOpacity="0.68" />
+      {/* trunk – donja sekcija */}
+      <g transform="translate(232 378) scale(-.78 .78) rotate(28)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#rightLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      <g transform="translate(225 335) scale(-.72 .72) rotate(-150)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#rightLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62"/></g>
+      {/* lijeva grana */}
+      <g transform="translate(189 240) scale(-.76 .76) rotate(-38)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#rightLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.60"/></g>
+      <g transform="translate(177 233) scale(-.70 .70) rotate(20)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#rightLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.68"/></g>
+      <g transform="translate(165 225) scale(-.68 .68) rotate(-52)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#rightLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62"/></g>
+      <g transform="translate(142 207) scale(-.64 .64) rotate(24)"><path d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z" fill="url(#rightLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(120 185) scale(-.60 .60) rotate(-46)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#rightLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.65"/></g>
+      {/* desna grana */}
+      <g transform="translate(248 293) scale(-.76 .76) rotate(55)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#rightLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.60"/></g>
+      <g transform="translate(263 269) scale(-.70 .70) rotate(-22)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#rightLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(273 242) scale(-.66 .66) rotate(60)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#rightLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      <g transform="translate(276 212) scale(-.74 .74) rotate(48)"><path d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z" fill="url(#rightLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62"/></g>
+      {/* trunk – između grana */}
+      <g transform="translate(220 252) scale(-.70 .70) rotate(-32)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#rightLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <g transform="translate(230 202) scale(-.66 .66) rotate(145)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#rightLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.65"/></g>
+      {/* gornja grana */}
+      <g transform="translate(239 86) scale(-.72 .72) rotate(-10)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#rightLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.60"/></g>
+      <g transform="translate(212 80) scale(-.68 .68) rotate(30)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#rightLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.62"/></g>
+      <g transform="translate(186 67) scale(-.64 .64) rotate(-45)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#rightLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.70"/></g>
+      <g transform="translate(162 49) scale(-.70 .70) rotate(-28)"><path d="M0 0C22-33 65-40 92-11C62 5 28 9 0 0Z" fill="url(#rightLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M5-1C32-8 60-10 86-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.60"/></g>
+      <g transform="translate(173 56) scale(-.60 .60) rotate(22)"><path d="M0 0C18-27 52-34 76-11C51 3 23 7 0 0Z" fill="url(#rightLeafDark)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 50-9 70-11" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      {/* trunk – gornji dio */}
+      <g transform="translate(252 157) scale(-.63 .63) rotate(-40)"><path d="M0 0C20-30 58-38 84-12C57 4 24 8 0 0Z" fill="url(#rightLeaf)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C28-8 53-10 78-12" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.65"/></g>
+      <g transform="translate(258 130) scale(-.60 .60) rotate(142)"><path d="M0 0C19-29 56-36 80-10C54 3 24 7 0 0Z" fill="url(#rightLeafSoft)" stroke="#d6c782" strokeWidth="1.3"/><path d="M4-1C27-7 52-10 74-10" stroke="#fff3ba" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.58"/></g>
+      <circle cx="216" cy="251" r="2.8" fill="#f3d06a" fillOpacity="0.72" />
+      <circle cx="226" cy="313" r="2.2" fill="#f3d06a" fillOpacity="0.60" />
+      <circle cx="268" cy="87" r="2.4" fill="#f3d06a" fillOpacity="0.65" />
+      <circle cx="101" cy="160" r="1.8" fill="#f3d06a" fillOpacity="0.55" />
       <defs>
         <linearGradient
           id="rightBranch"
