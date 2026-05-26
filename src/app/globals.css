@@ -366,18 +366,19 @@ body {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  transform: translate3d(0, 0, 0);
 }
 
 .hero-leaf-inner {
   animation-name: leafFall;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  transform: translate3d(0, 0, 0);
 }
 
 @keyframes leafFall {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
     opacity: 0;
   }
 
@@ -390,18 +391,18 @@ body {
   }
 
   100% {
-    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    transform: translate3d(0, 110vh, 0) rotate(360deg);
     opacity: 0;
   }
 }
 
 @keyframes leafSway {
   from {
-    transform: translateX(calc(-1 * var(--leaf-sway-x, 24px)));
+    transform: translate3d(calc(-1 * var(--leaf-sway-x, 24px)), 0, 0);
   }
 
   to {
-    transform: translateX(var(--leaf-sway-x, 24px));
+    transform: translate3d(var(--leaf-sway-x, 24px), 0, 0);
   }
 }
 
