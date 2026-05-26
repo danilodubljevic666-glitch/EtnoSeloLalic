@@ -972,3 +972,275 @@ body {
     padding: 1.75rem 1.5rem;
   }
 }
+
+/* ── Reviews score bar ─────────────────────────── */
+
+.reviews-score-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.reviews-score-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 80px;
+}
+
+.reviews-score-number {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #1a3c1e;
+  letter-spacing: -0.02em;
+}
+
+.reviews-score-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a7c54;
+}
+
+.reviews-score-divider {
+  width: 1px;
+  height: 56px;
+  background: rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.reviews-score-cats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem 1.5rem;
+  flex: 1;
+  min-width: 220px;
+}
+
+.reviews-score-cat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #57534e;
+}
+
+.reviews-score-cat-val {
+  font-weight: 700;
+  color: #1a3c1e;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .reviews-score-divider { display: none; }
+  .reviews-score-cats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── House rules ───────────────────────────────── */
+
+.rules-section {
+  background: #eef2ea;
+}
+
+.rules-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4a7c54;
+  margin-bottom: 0.5rem;
+}
+
+.rules-heading {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1c1a14;
+  line-height: 1.15;
+  margin-bottom: 0;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .rules-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.rule-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 1.1rem 1.2rem;
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.rule-icon-wrap {
+  width: 2.2rem;
+  height: 2.2rem;
+  flex-shrink: 0;
+  border-radius: 0.6rem;
+  background: #e8f0e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2d6a3f;
+}
+
+.rule-icon-wrap svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rule-icon-wrap.rule-no {
+  background: #fdecea;
+  color: #c0392b;
+}
+
+.rule-icon-wrap.rule-info {
+  background: #e8f0fb;
+  color: #2563eb;
+}
+
+.rule-body {}
+
+.rule-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1c1a14;
+  margin-bottom: 2px;
+}
+
+.rule-desc {
+  font-size: 0.78rem;
+  color: #78716c;
+  line-height: 1.4;
+}
+
+/* ── Location / contact ────────────────────────── */
+
+.contact-section {
+  background: #f7f3ec;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.contact-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4a7c54;
+  margin-bottom: 0.5rem;
+}
+
+.contact-heading {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1c1a14;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.contact-desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #57534e;
+  margin-bottom: 1.5rem;
+}
+
+.contact-booking-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 100px;
+  background: #003580;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 18px rgba(0,53,128,0.35);
+}
+
+.contact-booking-btn:hover {
+  background: #00266b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,53,128,0.42);
+}
+
+.contact-distances {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0,0,0,0.07);
+}
+
+.contact-distances-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #78716c;
+  margin-bottom: 0.25rem;
+}
+
+.contact-dist-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #44403c;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.contact-dist-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-dist-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-dist-km {
+  font-weight: 700;
+  color: #1c1a14;
+  white-space: nowrap;
+}

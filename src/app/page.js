@@ -189,7 +189,31 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
           <p className="reviews-kicker">Utisci gostiju</p>
           <h2 className="review-heading">Šta kažu naši gosti</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+
+          <div className="reviews-score-wrap">
+            <div className="reviews-score-main">
+              <span className="reviews-score-number">9.8</span>
+              <span className="reviews-score-label">Izuzetno</span>
+            </div>
+            <div className="reviews-score-divider" />
+            <div className="reviews-score-cats">
+              {[
+                ["Osoblje", "10"],
+                ["Čistoća", "10"],
+                ["Udobnost", "10"],
+                ["Lokacija", "10"],
+                ["Vrijednost", "10"],
+                ["Sadržaji", "9.2"],
+              ].map(([label, val]) => (
+                <div key={label} className="reviews-score-cat">
+                  <span>{label}</span>
+                  <span className="reviews-score-cat-val">{val}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-2 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
             <article className="review-card">
               <div className="review-quote-mark">&ldquo;</div>
@@ -209,7 +233,7 @@ export default function Home() {
             <article className="review-card">
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
-                Kolibe su udaljene oko 8 km od Andrijevice, ali mir i privatnost čine put vrednim.
+                Kolibe su udaljene oko 8 km od Andrijevice, ali mir i privatnost čine put vrijednim.
               </blockquote>
               <div className="review-stars">★★★★★</div>
               <div className="review-author-row">
@@ -232,6 +256,51 @@ export default function Home() {
                 <div>
                   <p className="review-name">Vera</p>
                   <p className="review-location">Severna Makedonija</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="review-card">
+              <div className="review-quote-mark">&ldquo;</div>
+              <blockquote className="review-copy">
+                Super ljubazan domaćin koji je bio toliko pažljiv da nas dođe da pokupi zbog lošeg vremena. Lijep smještaj, mirna okolina, predivno mjesto.
+              </blockquote>
+              <div className="review-stars">★★★★★</div>
+              <div className="review-author-row">
+                <div className="review-avatar" style={{ background: "#5b6b7c" }}>T</div>
+                <div>
+                  <p className="review-name">Tessa</p>
+                  <p className="review-location">Holandija</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="review-card">
+              <div className="review-quote-mark">&ldquo;</div>
+              <blockquote className="review-copy">
+                Lokacija u prirodi, za sve koji traže mir i odmor od svakodnevice. Domaćin uvijek dostupan i brine se za sve što gostu treba. Preporučujem svima.
+              </blockquote>
+              <div className="review-stars">★★★★★</div>
+              <div className="review-author-row">
+                <div className="review-avatar" style={{ background: "#1a6b4a" }}>J</div>
+                <div>
+                  <p className="review-name">Jani</p>
+                  <p className="review-location">Slovenija</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="review-card">
+              <div className="review-quote-mark">&ldquo;</div>
+              <blockquote className="review-copy">
+                Beautiful, comfortable place in nature with an excellent, kind host. A destination worth reaching.
+              </blockquote>
+              <div className="review-stars">★★★★★</div>
+              <div className="review-author-row">
+                <div className="review-avatar" style={{ background: "#3b4a6b" }}>J</div>
+                <div>
+                  <p className="review-name">Jeffrey</p>
+                  <p className="review-location">SAD</p>
                 </div>
               </div>
             </article>
@@ -275,6 +344,76 @@ export default function Home() {
       </section>
 
       <AmenitiesSection />
+
+      <section className="rules-section scroll-mt-24">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
+          <p className="rules-kicker">Boravak</p>
+          <h2 className="rules-heading">Kućni red</h2>
+          <div className="rules-grid">
+
+            <div className="rule-card">
+              <div className="rule-icon-wrap rule-info">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div className="rule-body">
+                <p className="rule-title">Prijava</p>
+                <p className="rule-desc">od 15:00 do 18:00</p>
+              </div>
+            </div>
+
+            <div className="rule-card">
+              <div className="rule-icon-wrap rule-info">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/></svg>
+              </div>
+              <div className="rule-body">
+                <p className="rule-title">Odjava</p>
+                <p className="rule-desc">od 08:00 do 12:00</p>
+              </div>
+            </div>
+
+            <div className="rule-card">
+              <div className="rule-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div className="rule-body">
+                <p className="rule-title">Djeca</p>
+                <p className="rule-desc">Dobrodošla svih uzrasta, krevetac besplatno (0–2 god.)</p>
+              </div>
+            </div>
+
+            <div className="rule-card">
+              <div className="rule-icon-wrap rule-no">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              </div>
+              <div className="rule-body">
+                <p className="rule-title">Pušenje</p>
+                <p className="rule-desc">Nije dozvoljeno</p>
+              </div>
+            </div>
+
+            <div className="rule-card">
+              <div className="rule-icon-wrap rule-no">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.96-1.45-2.344-2.5"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75z"/><path d="M4.42 20A2 2 0 014 18.5c0-3.5 3.3-3 3.5-6 .02-.17.2-1 1.5-1s1.48.83 1.5 1c.2 3 3.5 2.5 3.5 6 0 .84-.31 1.48-.78 2"/></svg>
+              </div>
+              <div className="rule-body">
+                <p className="rule-title">Kućni ljubimci</p>
+                <p className="rule-desc">Nisu dozvoljeni</p>
+              </div>
+            </div>
+
+            <div className="rule-card">
+              <div className="rule-icon-wrap rule-no">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              </div>
+              <div className="rule-body">
+                <p className="rule-title">Zabave</p>
+                <p className="rule-desc">Nisu dozvoljene</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {openImage && (
         <div
@@ -329,14 +468,45 @@ export default function Home() {
 
       <section
         id="kontakt"
-        className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16 sm:px-10"
+        className="contact-section scroll-mt-24"
       >
-        <h2 className="text-3xl font-bold tracking-tight text-stone-950">
-          {t.sections.contactTitle}
-        </h2>
-        <p className="mt-4 max-w-2xl text-lg leading-8 text-stone-700">
-          {t.sections.contactText}
-        </p>
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
+          <div className="contact-grid">
+            <div>
+              <p className="contact-kicker">Rezervacija</p>
+              <h2 className="contact-heading">{t.sections.contactTitle}</h2>
+              <p className="contact-desc">{t.sections.contactText}</p>
+              <a
+                href="https://www.booking.com/hotel/me/gazdinstvo-lalic.sr.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-booking-btn"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Rezerviši na Booking.com
+              </a>
+            </div>
+
+            <div className="contact-distances">
+              <p className="contact-distances-title">Udaljenosti</p>
+              {[
+                { name: "Andrijevica (centar)", km: "8 km" },
+                { name: "Plavsko jezero", km: "31 km" },
+                { name: "NP Prokletije", km: "41 km" },
+                { name: "Aerodrom Podgorica", km: "94 km" },
+              ].map(({ name, km }) => (
+                <div key={name} className="contact-dist-row">
+                  <span className="contact-dist-name">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    {name}
+                  </span>
+                  <span className="contact-dist-km">{km}</span>
+                </div>
+              ))}
+              <p className="mt-2 text-xs text-stone-400">Cecune, 84320 Andrijevica, Crna Gora</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

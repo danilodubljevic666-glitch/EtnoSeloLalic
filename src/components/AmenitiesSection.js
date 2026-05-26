@@ -3,14 +3,18 @@
 import { useState, useEffect, useRef } from "react";
 
 const AMENITIES = [
-  { key: "area",      label: "30 m² površina",       delay: 0.08 },
-  { key: "breakfast", label: "Doručak",                    delay: 0.14 },
-  { key: "parking",   label: "Besplatan parking",               delay: 0.20 },
-  { key: "wifi",      label: "Besplatan WiFi",                  delay: 0.26 },
-  { key: "family",    label: "Porodične sobe",             delay: 0.32 },
-                
-  { key: "ac",        label: "Klima-uređaj",               delay: 0.44 },
-             
+  { key: "area",      label: "30 m² površina",        delay: 0.08 },
+  { key: "breakfast", label: "Doručak",                delay: 0.14 },
+  { key: "parking",   label: "Besplatan parking",      delay: 0.20 },
+  { key: "wifi",      label: "Besplatan WiFi",         delay: 0.26 },
+  { key: "family",    label: "Porodične sobe",         delay: 0.32 },
+  { key: "ac",        label: "Klima-uređaj",           delay: 0.38 },
+  { key: "kitchen",   label: "Opremljena kuhinja",     delay: 0.44 },
+  { key: "tv",        label: "Flat-screen TV",         delay: 0.50 },
+  { key: "balcony",   label: "Balkon",                 delay: 0.56 },
+  { key: "terrace",   label: "Terasa",                 delay: 0.62 },
+  { key: "bathroom",  label: "Sopstveno kupatilo",     delay: 0.68 },
+  { key: "bbq",       label: "Roštilj",                delay: 0.74 },
 ];
 
 function AmenityIcon({ type }) {
@@ -81,7 +85,34 @@ function AmenityIcon({ type }) {
     ),
     bathroom: (
       <>
-        <path d="M12 2L5.5 10.5a7 7 0 1013 0z" />
+        <path d="M4 12h16a1 1 0 010 2l-1 4H5l-1-4a1 1 0 010-2z" />
+        <path d="M6 12V6a2 2 0 012-2h1" />
+        <circle cx="9" cy="4.5" r="0.6" fill="currentColor" stroke="none" />
+      </>
+    ),
+    kitchen: (
+      <>
+        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2" />
+        <path d="M7 2v11" />
+        <path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7" />
+      </>
+    ),
+    tv: (
+      <>
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <line x1="8" y1="21" x2="16" y2="21" />
+        <line x1="12" y1="17" x2="12" y2="21" />
+      </>
+    ),
+    bbq: (
+      <>
+        <path d="M4 8h16" />
+        <path d="M6 8a6 6 0 0012 0" />
+        <path d="M12 14v2" />
+        <path d="M9 20l1.5-4h3L15 20" />
+        <line x1="9" y1="4" x2="9" y2="2" />
+        <line x1="12" y1="4" x2="12" y2="2" />
+        <line x1="15" y1="4" x2="15" y2="2" />
       </>
     ),
   };
