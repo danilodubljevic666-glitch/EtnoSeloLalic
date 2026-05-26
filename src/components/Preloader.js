@@ -2,32 +2,36 @@
 
 import { useState, useEffect } from "react";
 
+const MIN_DISPLAY_MS = 2000;
+
 export default function Preloader() {
   const [phase, setPhase] = useState("visible");
 
   useEffect(() => {
-    let fadeTimer;
+    // Reveal body now that React has mounted
+    document.body.style.visibility = "";
+
+    const start = Date.now();
 
     const dismiss = () => {
-      fadeTimer = setTimeout(() => {
+      const elapsed = Date.now() - start;
+      const wait = Math.max(0, MIN_DISPLAY_MS - elapsed);
+      setTimeout(() => {
         setPhase("fading");
         setTimeout(() => setPhase("gone"), 700);
-      }, 250);
+      }, wait);
     };
 
     if (document.readyState === "complete") {
       dismiss();
     } else {
       window.addEventListener("load", dismiss, { once: true });
-      const fallback = setTimeout(dismiss, 4000);
+      const fallback = setTimeout(dismiss, 6000);
       return () => {
         window.removeEventListener("load", dismiss);
         clearTimeout(fallback);
-        clearTimeout(fadeTimer);
       };
     }
-
-    return () => clearTimeout(fadeTimer);
   }, []);
 
   if (phase === "gone") return null;
