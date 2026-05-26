@@ -39,18 +39,18 @@ export default function HeroSection() {
             {t.hero.description}
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href="#o-nama"
-              className="inline-flex min-w-44 justify-center rounded-md bg-emerald-700 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgb(0_0_0_/_0.32)] transition hover:-translate-y-0.5 hover:bg-emerald-800 hover:shadow-[0_18px_38px_rgb(0_0_0_/_0.38)]"
-            >
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="#o-nama" className="hero-btn hero-btn-primary">
               {t.hero.aboutButton}
+              <svg className="hero-btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
             </a>
-            <a
-              href="#kontakt"
-              className="inline-flex min-w-44 justify-center rounded-md border border-white/70 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgb(0_0_0_/_0.28)] backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-white hover:text-stone-950 hover:shadow-[0_18px_38px_rgb(0_0_0_/_0.36)]"
-            >
+            <a href="#kontakt" className="hero-btn hero-btn-outline">
               {t.hero.contactButton}
+              <svg className="hero-btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
             </a>
           </div>
         </div>

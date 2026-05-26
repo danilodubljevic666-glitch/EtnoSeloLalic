@@ -50,7 +50,7 @@ export default function Nav() {
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/50 text-white transition hover:border-white hover:bg-white/10"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/50 text-white transition duration-200 hover:border-white hover:bg-white/10"
             aria-label={isOpen ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((current) => !current)}
@@ -59,21 +59,9 @@ export default function Nav() {
               {isOpen ? t.nav.closeMenu : t.nav.openMenu}
             </span>
             <span className="flex w-5 flex-col gap-1.5" aria-hidden="true">
-              <span
-                className={`h-0.5 rounded-full bg-current transition ${
-                  isOpen ? "translate-y-2 rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`h-0.5 rounded-full bg-current transition ${
-                  isOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`h-0.5 rounded-full bg-current transition ${
-                  isOpen ? "-translate-y-2 -rotate-45" : ""
-                }`}
-              />
+              <span className={`hamburger-bar ${isOpen ? "bar-top-open" : ""}`} />
+              <span className={`hamburger-bar ${isOpen ? "bar-mid-open" : ""}`} />
+              <span className={`hamburger-bar ${isOpen ? "bar-bot-open" : ""}`} />
             </span>
           </button>
         </div>
@@ -83,8 +71,8 @@ export default function Nav() {
         <LanguageSwitch />
       </div>
 
-      {isOpen ? (
-        <div className="border-t border-white/15 bg-stone-950/80 px-6 py-4 shadow-sm backdrop-blur md:hidden">
+      <div className={`nav-mobile-menu md:hidden${isOpen ? " nav-mobile-menu-open" : ""}`}>
+        <div className="border-t border-white/15 bg-stone-950/90 px-6 py-4 shadow-sm backdrop-blur">
           <div className="mx-auto flex max-w-6xl flex-col gap-1">
             {linkKeys.map((link) => (
               <a
@@ -102,7 +90,7 @@ export default function Nav() {
             ))}
           </div>
         </div>
-      ) : null}
+      </div>
     </header>
   );
 }
