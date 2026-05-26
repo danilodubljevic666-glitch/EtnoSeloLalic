@@ -28,6 +28,7 @@ export default function HeroSection() {
 
       <HeroSideOrnamentLeft />
       <HeroSideOrnamentRight />
+      <FloatingLeaves />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center justify-center px-6 pb-20 pt-28 sm:px-10">
         <div className="hero-content max-w-4xl text-center text-white">
@@ -55,6 +56,63 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+const LEAF_PATHS = {
+  a: {
+    body: "M0,-20 C9,-13 14,-2 11,9 C8,18 3,22 0,22 C-3,22 -8,18 -11,9 C-14,-2 -9,-13 0,-20Z",
+    vein: "M0,-20 C0.5,-7 0.5,7 0,22",
+  },
+  b: {
+    body: "M0,-18 C11,-11 16,2 13,13 C10,21 5,24 0,24 C-5,24 -10,21 -13,13 C-16,2 -11,-11 0,-18Z",
+    vein: "M0,-18 C0.5,-5 0.5,8 0,24",
+  },
+  c: {
+    body: "M0,-22 C10,-15 16,-3 12,9 C8,18 3,22 0,22 C-4,22 -10,14 -12,4 C-14,-7 -8,-16 0,-22Z",
+    vein: "M0,-22 C0.5,-8 0.5,7 0,22",
+  },
+};
+
+const LEAVES = [
+  { id:1,  left:"5%",  fall:"15s", sway:"4.0s", delay:"-4s",  swayX:"20px", size:18, rot:-20, type:"a", fill:"rgba(80,140,40,0.60)" },
+  { id:2,  left:"14%", fall:"11s", sway:"3.2s", delay:"-9s",  swayX:"16px", size:13, rot: 30, type:"b", fill:"rgba(44,96,28,0.52)" },
+  { id:3,  left:"25%", fall:"17s", sway:"4.6s", delay:"-2s",  swayX:"28px", size:22, rot:-12, type:"c", fill:"rgba(112,172,52,0.56)" },
+  { id:4,  left:"38%", fall:"12s", sway:"2.8s", delay:"-8s",  swayX:"14px", size:15, rot: 45, type:"a", fill:"rgba(48,84,28,0.58)" },
+  { id:5,  left:"50%", fall:"16s", sway:"4.2s", delay:"-1s",  swayX:"26px", size:20, rot:-35, type:"b", fill:"rgba(100,164,44,0.54)" },
+  { id:6,  left:"62%", fall:"13s", sway:"3.5s", delay:"-11s", swayX:"18px", size:16, rot: 18, type:"c", fill:"rgba(60,112,32,0.60)" },
+  { id:7,  left:"72%", fall:"18s", sway:"5.0s", delay:"-5s",  swayX:"30px", size:23, rot:-48, type:"a", fill:"rgba(124,184,60,0.52)" },
+  { id:8,  left:"80%", fall:"10s", sway:"3.0s", delay:"-14s", swayX:"13px", size:12, rot: 58, type:"b", fill:"rgba(48,92,28,0.56)" },
+  { id:9,  left:"88%", fall:"14s", sway:"3.8s", delay:"-7s",  swayX:"22px", size:19, rot:-22, type:"c", fill:"rgba(88,148,40,0.60)" },
+  { id:10, left:"93%", fall:"12s", sway:"2.6s", delay:"-3s",  swayX:"16px", size:14, rot: 38, type:"a", fill:"rgba(52,96,28,0.58)" },
+];
+
+function FloatingLeaves() {
+  return (
+    <div className="hero-leaves" aria-hidden="true">
+      {LEAVES.map(({ id, left, fall, sway, delay, swayX, size, rot, type, fill }) => {
+        const { body, vein } = LEAF_PATHS[type];
+        return (
+          <div
+            key={id}
+            className="hero-leaf-outer"
+            style={{ left, "--leaf-fall": fall, "--leaf-sway": sway, "--leaf-delay": delay, "--leaf-sway-x": swayX }}
+          >
+            <div className="hero-leaf-inner">
+              <svg
+                viewBox="-16 -24 32 50"
+                width={size}
+                height={size}
+                style={{ transform: `rotate(${rot}deg)` }}
+              >
+                <path d={body} fill={fill} />
+                <path d={vein} stroke="rgba(255,255,255,0.26)" strokeWidth="0.9" fill="none" strokeLinecap="round" />
+              </svg>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
