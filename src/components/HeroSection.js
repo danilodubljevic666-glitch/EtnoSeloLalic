@@ -90,25 +90,29 @@ const LEAVES = [
 function FloatingLeaves() {
   return (
     <div className="hero-leaves" aria-hidden="true">
-      {LEAVES.map(({ id, left, fall, sway, delay, swayX, size, rot, type, fill }) => {
+      {LEAVES.map(({ id, left, fall, delay, swayX, size, rot, type, fill }) => {
         const { body, vein } = LEAF_PATHS[type];
         return (
           <div
             key={id}
-            className="hero-leaf-outer"
-            style={{ left, animationDuration: sway, animationDelay: delay, "--leaf-sway-x": swayX }}
+            className="hero-leaf"
+            style={{
+              left,
+              animationDuration: fall,
+              animationDelay: delay,
+              "--sx-neg": `-${swayX}`,
+              "--sx-pos": swayX,
+            }}
           >
-            <div className="hero-leaf-inner" style={{ animationDuration: fall, animationDelay: delay }}>
-              <svg
-                viewBox="-16 -24 32 50"
-                width={size}
-                height={size}
-                style={{ transform: `rotate(${rot}deg)` }}
-              >
-                <path d={body} fill={fill} />
-                <path d={vein} stroke="rgba(255,255,255,0.26)" strokeWidth="0.9" fill="none" strokeLinecap="round" />
-              </svg>
-            </div>
+            <svg
+              viewBox="-16 -24 32 50"
+              width={size}
+              height={size}
+              style={{ transform: `rotate(${rot}deg)` }}
+            >
+              <path d={body} fill={fill} />
+              <path d={vein} stroke="rgba(255,255,255,0.26)" strokeWidth="0.9" fill="none" strokeLinecap="round" />
+            </svg>
           </div>
         );
       })}

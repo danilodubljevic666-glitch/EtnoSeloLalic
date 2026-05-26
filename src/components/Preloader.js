@@ -14,6 +14,7 @@ export default function Preloader() {
       const elapsed = Date.now() - start;
       const wait = Math.max(0, MIN_DISPLAY_MS - elapsed);
       setTimeout(() => {
+        document.documentElement.classList.add("page-ready");
         setPhase("fading");
         setTimeout(() => setPhase("gone"), 700);
       }, wait);
