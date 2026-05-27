@@ -8,6 +8,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 export const metadata = {
   title: "Etno Selo Lalić",
   description: "Etno Selo Lalić — autentičan smještaj u srcu prirode Crne Gore",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

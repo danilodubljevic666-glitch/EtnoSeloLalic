@@ -215,7 +215,7 @@ export default function Home() {
 
           <div className="mt-2 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-            <article className="review-card">
+            <article className="review-card" style={{ animationDelay: "0.18s" }}>
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
                 Prije svega srdačan doček vlasnika gazdinstva, mir i priroda utiču opuštajuće.
@@ -230,7 +230,7 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="review-card">
+            <article className="review-card" style={{ animationDelay: "0.28s" }}>
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
                 Kolibe su udaljene oko 8 km od Andrijevice, ali mir i privatnost čine put vrijednim.
@@ -245,7 +245,7 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="review-card">
+            <article className="review-card" style={{ animationDelay: "0.38s" }}>
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
                 Bilo je odlično! Domaćini su bili veoma ljubazni, stan je uredan, a pogled na netaknutu prirodu ostavlja bez daha!
@@ -260,7 +260,7 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="review-card">
+            <article className="review-card" style={{ animationDelay: "0.48s" }}>
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
                 Super ljubazan domaćin koji je bio toliko pažljiv da nas dođe da pokupi zbog lošeg vremena. Lijep smještaj, mirna okolina, predivno mjesto.
@@ -275,7 +275,7 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="review-card">
+            <article className="review-card" style={{ animationDelay: "0.58s" }}>
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
                 Lokacija u prirodi, za sve koji traže mir i odmor od svakodnevice. Domaćin uvijek dostupan i brine se za sve što gostu treba. Preporučujem svima.
@@ -290,7 +290,7 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="review-card">
+            <article className="review-card" style={{ animationDelay: "0.68s" }}>
               <div className="review-quote-mark">&ldquo;</div>
               <blockquote className="review-copy">
                 Beautiful, comfortable place in nature with an excellent, kind host. A destination worth reaching.
@@ -309,39 +309,93 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="galerija"
-        className="mx-auto max-w-5xl scroll-mt-24 px-6 py-16 sm:px-10"
-      >
-        <h2 className="text-3xl font-bold tracking-tight text-stone-950 text-center">
-          {t.sections.galleryTitle}
-        </h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          {galleryImages.map((src, index) => (
+      <section id="galerija" className="kucice-section scroll-mt-24">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
+          <p className="kucice-kicker">Smještaj</p>
+          <h2 className="kucice-heading">Naše Kućice</h2>
+
+          <div className="kucice-featured">
             <div
-              key={src}
+              className="kucice-main"
               role="button"
               tabIndex={0}
-              className="gallery-item relative overflow-hidden rounded-lg border border-stone-300 bg-white/70 aspect-[4/3]"
-              style={{ animationDelay: `${index * 0.08}s` }}
-              onClick={() => openImageByIndex(index)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  openImageByIndex(index);
-                }
-              }}
+              onClick={() => openImageByIndex(0)}
+              onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && openImageByIndex(0)}
             >
               <Image
-                src={src}
-                alt={`${t.sections.galleryTitle} ${index + 1}`}
+                src={galleryImages[0]}
+                alt="Kućica 1"
                 fill
                 className="object-cover transition duration-500 hover:scale-105"
-                sizes="(max-width: 640px) 100vw, 33vw"
+                sizes="(max-width: 640px) 100vw, 60vw"
+                priority
               />
             </div>
-          ))}
+            <div className="kucice-side">
+              {galleryImages.slice(1, 5).map((src, i) => (
+                <div
+                  key={src}
+                  className="kucice-thumb"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openImageByIndex(i + 1)}
+                  onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && openImageByIndex(i + 1)}
+                >
+                  <Image
+                    src={src}
+                    alt={`Kućica ${i + 2}`}
+                    fill
+                    className="object-cover transition duration-500 hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, 20vw"
+                  />
+                  {i === 3 && galleryImages.length > 5 && (
+                    <div className="kucice-overlay">
+                      <span>+{galleryImages.length - 5} slika</span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="kucice-rest">
+            {galleryImages.slice(5).map((src, i) => (
+              <div
+                key={src}
+                className="kucice-rest-item"
+                role="button"
+                tabIndex={0}
+                onClick={() => openImageByIndex(i + 5)}
+                onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && openImageByIndex(i + 5)}
+              >
+                <Image
+                  src={src}
+                  alt={`Kućica ${i + 6}`}
+                  fill
+                  className="object-cover transition duration-500 hover:scale-105"
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      <div className="booking-cta-wrap">
+        <div className="booking-cta-inner">
+          <p className="booking-cta-kicker">Dostupnost</p>
+          <h2 className="booking-cta-heading">Rezervišite odmah</h2>
+          <p className="booking-cta-sub">Provjerite slobodne termine i rezervišite direktno putem Booking.com</p>
+          <a
+            href="https://www.booking.com/hotel/me/gazdinstvo-lalic.sr.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="booking-cta-btn"
+          >
+            Rezervišite na Booking.com
+          </a>
+        </div>
+      </div>
 
       <AmenitiesSection />
 
@@ -351,27 +405,29 @@ export default function Home() {
           <h2 className="rules-heading">Kućni red</h2>
           <div className="rules-grid">
 
-            <div className="rule-card">
-              <div className="rule-icon-wrap rule-info">
+            <div className="rule-card rule-card--info">
+              <div className="rule-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
               <div className="rule-body">
                 <p className="rule-title">Prijava</p>
                 <p className="rule-desc">od 15:00 do 18:00</p>
               </div>
+              <span className="rule-badge rule-badge--info">Info</span>
             </div>
 
-            <div className="rule-card">
-              <div className="rule-icon-wrap rule-info">
+            <div className="rule-card rule-card--info">
+              <div className="rule-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/></svg>
               </div>
               <div className="rule-body">
                 <p className="rule-title">Odjava</p>
                 <p className="rule-desc">od 08:00 do 12:00</p>
               </div>
+              <span className="rule-badge rule-badge--info">Info</span>
             </div>
 
-            <div className="rule-card">
+            <div className="rule-card rule-card--ok">
               <div className="rule-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
               </div>
@@ -379,36 +435,40 @@ export default function Home() {
                 <p className="rule-title">Djeca</p>
                 <p className="rule-desc">Dobrodošla svih uzrasta, krevetac besplatno (0–2 god.)</p>
               </div>
+              <span className="rule-badge rule-badge--ok">Dozvoljeno</span>
             </div>
 
-            <div className="rule-card">
-              <div className="rule-icon-wrap rule-no">
+            <div className="rule-card rule-card--no">
+              <div className="rule-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
               </div>
               <div className="rule-body">
                 <p className="rule-title">Pušenje</p>
                 <p className="rule-desc">Nije dozvoljeno</p>
               </div>
+              <span className="rule-badge rule-badge--no">Zabranjeno</span>
             </div>
 
-            <div className="rule-card">
-              <div className="rule-icon-wrap rule-no">
+            <div className="rule-card rule-card--no">
+              <div className="rule-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.96-1.45-2.344-2.5"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75z"/><path d="M4.42 20A2 2 0 014 18.5c0-3.5 3.3-3 3.5-6 .02-.17.2-1 1.5-1s1.48.83 1.5 1c.2 3 3.5 2.5 3.5 6 0 .84-.31 1.48-.78 2"/></svg>
               </div>
               <div className="rule-body">
                 <p className="rule-title">Kućni ljubimci</p>
                 <p className="rule-desc">Nisu dozvoljeni</p>
               </div>
+              <span className="rule-badge rule-badge--no">Zabranjeno</span>
             </div>
 
-            <div className="rule-card">
-              <div className="rule-icon-wrap rule-no">
+            <div className="rule-card rule-card--no">
+              <div className="rule-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
               </div>
               <div className="rule-body">
                 <p className="rule-title">Zabave</p>
                 <p className="rule-desc">Nisu dozvoljene</p>
               </div>
+              <span className="rule-badge rule-badge--no">Zabranjeno</span>
             </div>
 
           </div>
@@ -505,6 +565,19 @@ export default function Home() {
               ))}
               <p className="mt-2 text-xs text-stone-400">Cecune, 84320 Andrijevica, Crna Gora</p>
             </div>
+          </div>
+
+          <div className="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.558272200864!2d19.776886996789546!3d42.67071530000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13528817c9acb205%3A0x8566ccb0c985ff0c!2sGazdinstvo%20Lalic!5e0!3m2!1sen!2s!4v1779844276309!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokacija Etno Sela Lalić"
+            />
           </div>
         </div>
       </section>
