@@ -1,10 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const [leavesReady, setLeavesReady] = useState(false);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setLeavesReady(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   return (
     <section
@@ -28,7 +35,7 @@ export default function HeroSection() {
 
       <HeroSideOrnamentLeft />
       <HeroSideOrnamentRight />
-      <FloatingLeaves />
+      {leavesReady && <FloatingLeaves />}
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center justify-center px-6 pb-20 pt-28 sm:px-10">
         <div className="hero-content max-w-4xl text-center text-white">

@@ -841,11 +841,7 @@ body {
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
-  visibility: hidden;
-}
-
-.page-ready .hero-leaves {
-  visibility: visible;
+  contain: layout style paint;
 }
 
 .hero-leaf {
@@ -854,6 +850,8 @@ body {
   animation-name: leafFloat;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  will-change: transform;
+  contain: layout style paint;
 }
 
 @keyframes leafFloat {
@@ -884,9 +882,6 @@ body {
     animation: none;
   }
 
-  .page-ready .hero-leaves {
-    visibility: hidden;
-  }
 }
 
 .about-visible .about-kicker {
@@ -1573,6 +1568,35 @@ body {
   line-height: 1.75;
   color: #57534e;
   margin-bottom: 1.5rem;
+}
+
+.contact-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contact-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 100px;
+  background: #2d6a42;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 18px rgba(30,90,50,0.35);
+}
+
+.contact-phone-btn:hover {
+  background: #1e5233;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(30,90,50,0.42);
 }
 
 .contact-booking-btn {

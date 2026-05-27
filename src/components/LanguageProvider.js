@@ -35,8 +35,8 @@ const translations = {
         { value: "1 soba", label: "klimatizovana vikendica sa kuhinjom" }
       ],
       galleryTitle: "Galerija",
-      contactTitle: "Kontakt",
-      contactText: "Dodajte telefon, adresu, email i mapu za posjetioce."
+      contactTitle: "Kontakt i rezervacija",
+      contactText: "Za direktnu rezervaciju pozovite nas ili rezervišite putem Booking.com."
     }
   },
   en: {
@@ -71,8 +71,8 @@ const translations = {
         { value: "1 bedroom", label: "air-conditioned cabin with kitchen" }
       ],
       galleryTitle: "Gallery",
-      contactTitle: "Contact",
-      contactText: "Add a phone number, address, email, and map for visitors."
+      contactTitle: "Contact & Booking",
+      contactText: "Call us directly for a reservation or book through Booking.com."
     }
   }
 };
