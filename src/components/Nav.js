@@ -34,13 +34,9 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="group relative px-3 py-2 text-sm font-semibold text-white transition hover:text-emerald-100"
+              className="nav-link px-1 py-2 text-sm font-semibold text-stone-200 transition-colors duration-200 hover:text-white"
             >
-              <span
-                className="absolute inset-0 rounded-md border border-white/70 opacity-0 scale-x-75 scale-y-50 transition duration-300 group-hover:opacity-100 group-hover:scale-100"
-                aria-hidden="true"
-              />
-              <span className="relative">{t.nav[link.key]}</span>
+              {t.nav[link.key]}
             </a>
           ))}
         </div>
@@ -78,14 +74,10 @@ export default function Nav() {
               <a
                 key={link.href}
                 href={link.href}
-                className="group relative rounded-md px-3 py-3 text-base font-semibold text-white transition hover:text-emerald-100"
+                className="nav-link px-1 py-3 text-base font-semibold text-stone-200 transition-colors duration-200 hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
-                <span
-                  className="absolute inset-0 rounded-md border border-white/60 opacity-0 scale-x-75 scale-y-50 transition duration-300 group-hover:opacity-100 group-hover:scale-100"
-                  aria-hidden="true"
-                />
-                <span className="relative">{t.nav[link.key]}</span>
+                {t.nav[link.key]}
               </a>
             ))}
           </div>
