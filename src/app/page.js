@@ -403,74 +403,42 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
           <p className="rules-kicker">Boravak</p>
           <h2 className="rules-heading">Kućni red</h2>
-          <div className="rules-grid">
 
-            <div className="rule-card rule-card--info">
-              <div className="rule-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div className="rule-body">
-                <p className="rule-title">Prijava</p>
-                <p className="rule-desc">od 15:00 do 18:00</p>
-              </div>
-              <span className="rule-badge rule-badge--info">Info</span>
+          <div className="rules-times">
+            <div className="rules-time-block">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span className="rules-time-label">Prijava</span>
+              <span className="rules-time-value">15:00 – 18:00</span>
             </div>
-
-            <div className="rule-card rule-card--info">
-              <div className="rule-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/></svg>
-              </div>
-              <div className="rule-body">
-                <p className="rule-title">Odjava</p>
-                <p className="rule-desc">od 08:00 do 12:00</p>
-              </div>
-              <span className="rule-badge rule-badge--info">Info</span>
+            <div className="rules-time-divider" />
+            <div className="rules-time-block">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/></svg>
+              <span className="rules-time-label">Odjava</span>
+              <span className="rules-time-value">08:00 – 12:00</span>
             </div>
+          </div>
 
-            <div className="rule-card rule-card--ok">
-              <div className="rule-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-              </div>
-              <div className="rule-body">
-                <p className="rule-title">Djeca</p>
-                <p className="rule-desc">Dobrodošla svih uzrasta, krevetac besplatno (0–2 god.)</p>
-              </div>
-              <span className="rule-badge rule-badge--ok">Dozvoljeno</span>
+          <div className="rules-items">
+            <div className="rules-item rules-item--ok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              <span className="rules-item-label">Djeca</span>
+              <span className="rules-item-sub">Dobrodošla, krevetac besplatno (0–2 god.)</span>
             </div>
-
-            <div className="rule-card rule-card--no">
-              <div className="rule-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-              </div>
-              <div className="rule-body">
-                <p className="rule-title">Pušenje</p>
-                <p className="rule-desc">Nije dozvoljeno</p>
-              </div>
-              <span className="rule-badge rule-badge--no">Zabranjeno</span>
+            <div className="rules-item rules-item--no">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              <span className="rules-item-label">Pušenje</span>
+              <span className="rules-item-sub">Nije dozvoljeno</span>
             </div>
-
-            <div className="rule-card rule-card--no">
-              <div className="rule-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.96-1.45-2.344-2.5"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75z"/><path d="M4.42 20A2 2 0 014 18.5c0-3.5 3.3-3 3.5-6 .02-.17.2-1 1.5-1s1.48.83 1.5 1c.2 3 3.5 2.5 3.5 6 0 .84-.31 1.48-.78 2"/></svg>
-              </div>
-              <div className="rule-body">
-                <p className="rule-title">Kućni ljubimci</p>
-                <p className="rule-desc">Nisu dozvoljeni</p>
-              </div>
-              <span className="rule-badge rule-badge--no">Zabranjeno</span>
+            <div className="rules-item rules-item--no">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="5.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 22c-4.5 0-7-2.2-7-5.8 0-2.6 1.6-4.6 4-5.4.6-.2 1.3-.3 2-.3h2c.7 0 1.4.1 2 .3 2.4.8 4 2.8 4 5.4 0 3.6-2.5 5.8-7 5.8z"/></svg>
+              <span className="rules-item-label">Kućni ljubimci</span>
+              <span className="rules-item-sub">Nisu dozvoljeni</span>
             </div>
-
-            <div className="rule-card rule-card--no">
-              <div className="rule-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-              </div>
-              <div className="rule-body">
-                <p className="rule-title">Zabave</p>
-                <p className="rule-desc">Nisu dozvoljene</p>
-              </div>
-              <span className="rule-badge rule-badge--no">Zabranjeno</span>
+            <div className="rules-item rules-item--no rules-item--last">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <span className="rules-item-label">Zabave</span>
+              <span className="rules-item-sub">Nisu dozvoljene</span>
             </div>
-
           </div>
         </div>
       </section>

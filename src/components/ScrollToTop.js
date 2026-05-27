@@ -12,8 +12,9 @@ export default function ScrollToTop() {
   }, []);
 
   return (
-    <a
-      href="#pocetna"
+    <button
+      type="button"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className={`scroll-to-top${visible ? " scroll-to-top-visible" : ""}`}
       aria-label="Povratak na vrh"
     >
@@ -28,6 +29,6 @@ export default function ScrollToTop() {
       >
         <polyline points="18 15 12 9 6 15" />
       </svg>
-    </a>
+    </button>
   );
 }
