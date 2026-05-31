@@ -15,6 +15,9 @@ const AMENITIES = [
   { key: "terrace",   label: "Terasa",                 delay: 0.62 },
   { key: "bathroom",  label: "Sopstveno kupatilo",     delay: 0.68 },
   { key: "bbq",       label: "Roštilj",                delay: 0.74 },
+  { key: "horse",     label: "Jahanje konja",          delay: 0.80 },
+  { key: "bicycle",   label: "Iznajmljivanje bicikala", delay: 0.86 },
+  { key: "fishing",   label: "Flyfishing",             delay: 0.92 },
 ];
 
 function AmenityIcon({ type }) {
@@ -113,6 +116,32 @@ function AmenityIcon({ type }) {
         <line x1="9" y1="4" x2="9" y2="2" />
         <line x1="12" y1="4" x2="12" y2="2" />
         <line x1="15" y1="4" x2="15" y2="2" />
+      </>
+    ),
+    horse: (
+      <>
+        <path d="M4 16c0 2 1.5 4 4 4h8c2.5 0 4-2 4-4V9c0-1-.5-2-1.5-2.5L17 5l-1-3h-3l.5 2.5L12 6H9L7 4.5 7.5 2H4.5L4 5 2.5 6.5C1.5 7.5 1 8.5 1 9.5V12c0 1 .5 2 1.5 2.5L4 16z" />
+        <circle cx="8" cy="9" r="1" fill="currentColor" stroke="none" />
+        <path d="M14 16v4" />
+        <path d="M10 16v4" />
+      </>
+    ),
+    bicycle: (
+      <>
+        <circle cx="5.5" cy="17.5" r="3.5" />
+        <circle cx="18.5" cy="17.5" r="3.5" />
+        <path d="M15 6a1 1 0 100-2 1 1 0 000 2zm-3 11.5L8 9l4-2 2 4.5h4" />
+        <path d="M5.5 17.5L10 9" />
+      </>
+    ),
+    fishing: (
+      <>
+        <path d="M3 3l4 4" />
+        <path d="M7 7c5-3 10 1 10 6 0 3-2 5-5 5-2 0-4-1-5-3" />
+        <path d="M14 14l4 4" />
+        <circle cx="18" cy="18" r="2" />
+        <path d="M7 7L4 18" />
+        <circle cx="4" cy="18" r="1.5" fill="currentColor" stroke="none" />
       </>
     ),
   };
